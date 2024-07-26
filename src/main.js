@@ -1,4 +1,22 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+// import router from './router';
+// import store from './store';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'animate.css/animate.min.css';
+import './css/style.css';
+import 'vue3-carousel/dist/carousel.css';
+import router from './router'
+import 'feather-icons'
+import './css/sstyle.css'
+import WOW from 'wowjs';
+new WOW.WOW().init();
 
-createApp(App).mount('#app')
+const app = createApp(App);
+app.use(router)
+// app.use(router);
+// app.use(store);
+
+app.mount('#app');

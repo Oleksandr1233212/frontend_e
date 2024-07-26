@@ -3,13 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev": "vite",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.2",
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "feather-icons": "^4.29.2",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.7.1",
+    "jquery.easing": "^1.4.1",
+    "owl.carousel": "^2.3.4",
+    "vue": "^3.2.13",
+    "vue-owl-carousel": "^2.0.3",
+    "vue-router": "^4.3.2",
+    "vue3-carousel": "^0.3.3",
+    "waypoints": "^4.0.1",
+    "wowjs": "^1.1.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -32,7 +47,9 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "vue/multi-word-component-names": "off"
+    }
   },
   "browserslist": [
     "> 1%",
