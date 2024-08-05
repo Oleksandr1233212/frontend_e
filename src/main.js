@@ -12,7 +12,9 @@ import router from './router'
 import 'feather-icons'
 import './css/sstyle.css'
 import WOW from 'wowjs';
+import 'axios'
 new WOW.WOW().init();
+
 
 const app = createApp(App);
 app.use(router)
