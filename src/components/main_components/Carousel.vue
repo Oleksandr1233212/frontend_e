@@ -34,12 +34,12 @@ export default {
     return {
       images: [
         {
-          src: require('@/img/carousel-1.jpg'),
+          src: require('../../img/carousel-1.jpg'),
           title: 'The Best Online Learning Platform',
           description: 'Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.'
         },
         {
-          src: require('@/img/carousel-2.jpg'),
+          src: require('../../img/carousel-2.jpg'),
           title: 'Get Educated Online From Your Home',
           description: 'Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.'
         }

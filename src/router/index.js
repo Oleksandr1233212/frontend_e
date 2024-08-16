@@ -1,13 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import AppMain from '../main_files/AppMain.vue'
-import AppErrorr from '../others/AppErr.vue'
-import AppAbout from '../others/AppAbout.vue'
-import AppContact from '../others/AppContact.vue'
-import AppCourses from '../others/AppCourses.vue'
-import AppTeam from '../others/AppTeam.vue'
-import AppTestimonial from '../others/AppTestimonial.vue'
-import AppLogin from '../others/AppLogin.vue'
-import AppRegister from '../others/AppRegister.vue';
+import AppMain from '../components/AppMain.vue'
+import AppErrorr from '../components/AppErr.vue'
+import AppAbout from '../components/AppAbout.vue'
+import AppContact from '../components/AppContact.vue'
+import AppCourses from '../components/AppCourses.vue'
+import AppTeam from '../components/AppTeam.vue'
+import AppTestimonial from '../components/AppTestimonial.vue'
+import AppLogin from '../components/AppLogin.vue'
+import AppRegister from '../components/AppRegister.vue';
+import AppAdmin from '../components/AppAdmin.vue'
 const routes = [
   {
     path: '/',
@@ -58,6 +59,11 @@ const routes = [
     path: '/register',
     name: 'register',
     component: AppRegister
+  },
+  {
+    path: '/admin',
+    name: 'admin',
+    component: AppAdmin
   },
 ];
 

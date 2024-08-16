@@ -56,7 +56,7 @@
                                 <div class=" dont-have">Already Registered? <router-link :to='`/login`'><a>Login</a></router-link>
                                 </div>
                                 <div class="form-group mb-0">
-                                    <button class="btn btn-primary btn-block" type="submit" @click="register()">Register</button>
+                                    <button class="btn btn-primary btn-block" type="button" @click="register()">Register</button>
                                 </div>
                             </form>
 
@@ -117,8 +117,8 @@ export default {
 
 
                     const response = await axios.post(API_URL + "/register", formData);
-                    if (response.data.userId) {
-                        localStorage.setItem('userId', JSON.stringify(response.data.userId))
+                    if (response) {
+                        this.$router.push('/login');
                         
                     }
 

@@ -1,7 +1,7 @@
 <script>
-import Navbar from '../main_files/Navbar.vue'
-import Headerr from '../main_files/Header.vue'
-import Foter from '../main_files/Footer.vue'
+import Navbar from './main_components/Navbar.vue'
+import Headerr from './main_components/Header.vue'
+import Foter from './main_components/Footer.vue'
 export default {
   name: 'App',
   components: {

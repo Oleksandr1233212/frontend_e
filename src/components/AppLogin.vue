@@ -39,12 +39,12 @@
                             <form>
                                 <div class="form-group">
                                     <label>Username <span class="login-danger">*</span></label>
-                                    <input class="form-control" type="text" v-model="username">
+                                    <input class="form-control" type="text" v-model="loginData.username">
                                     <span class="profile-views"><i class="fas fa-user-circle"></i></span>
                                 </div>
                                 <div class="form-group">
                                     <label>Password <span class="login-danger">*</span></label>
-                                    <input class="form-control pass-input" type="text" v-model="password">
+                                    <input class="form-control pass-input" type="text" v-model="loginData.password">
                                     <span class="profile-views feather-eye toggle-password"></span>
                                 </div>
                                 <div class="forgotpass">
@@ -57,7 +57,7 @@
 
                                 </div>
                                 <div class="form-group">
-                                    <button class="btn btn-primary btn-block" type="submit" @click="login()">Login</button>
+                                    <button class="btn btn-primary btn-block" type="button" @click="login()">Login</button>
                                 </div>
                             </form>
 
@@ -85,7 +85,7 @@
 
 <script>
 import axios from 'axios'
-const API_URL = "http://localhost:5035/api/tasknanagerapp/";
+const API_URL = "http://localhost:5035/api/taskmanagerapp";
 export default {
     name: 'Login',
     components: {
@@ -104,10 +104,12 @@ export default {
     },
     methods: {
         async login() {
+            
             if (!this.loginData.username || !this.loginData.password) {
                 console.log("Username and Password are required")
             } else {
                 try {
+                    console.log('gagga')
                     const formData = new FormData();
                     formData.append('username', this.loginData.username);
 
@@ -117,11 +119,14 @@ export default {
 
                     if (response.data.userId) {
                         localStorage.setItem('userId', response.data.userId);
+                        this.$router.push('/admin');
 
                     }
 
-                    this.username = ""
-                    this.password = ""
+                    this.loginData={
+                        username: '',
+                        password:''
+                    }
 
                 } catch (error) {
                     console.log("something went wrong")

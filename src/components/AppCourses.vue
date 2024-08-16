@@ -1,25 +1,25 @@
 <script>
-import Navbar from '../main_files/Navbar.vue'
-import Service from '../main_files/Services.vue'
-import About from '../main_files/About.vue'
-import Team from '../main_files/Team.vue'
-import Foter from '../main_files/Footer.vue'
-import Headerr from '../main_files/Header.vue'
+import Navbar from './main_components/Navbar.vue'
+import Headerr from './main_components/Header.vue'
+import Categories from './main_components/Categories.vue'
+import Courses from './main_components/Courses.vue'
+import Testimonial from './main_components/Testimonials.vue'
+import Foter from './main_components/Footer.vue'
 export default {
   name: 'App',
   components: {
     Navbar,
-    Service,
-    About,
-    Team,
     Foter,
-    Headerr
+    Headerr,
+    Categories,
+    Courses,
+    Testimonial
    
   }
 };
 </script>
-<template>
 
+<template>
 
 <head>
     <meta charset="utf-8">
@@ -71,19 +71,18 @@ export default {
     <!-- Header End -->
 
 
-    <!-- Service Start -->
-    <Service />
-    <!-- Service End -->
+    <!-- Categories Start -->
+    <Categories />
+    <!-- Categories Start -->
 
 
-    <!-- About Start -->
-    <About />
-    <!-- About End -->
+    <!-- Courses Start -->
+    <Courses />
 
 
-    <!-- Team Start -->
-    <Team />
-    <!-- Team End -->
+    <!-- Testimonial Start -->
+    <Testimonial />
+    <!-- Testimonial End -->
         
 
     <!-- Footer Start -->
@@ -96,10 +95,9 @@ export default {
 
 
     <!-- JavaScript Libraries -->
-    
+ 
 
-    <!-- Template Javascript -->
-   
+  
 </body>
 
 </template>
