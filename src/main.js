@@ -13,6 +13,8 @@ import 'feather-icons'
 import './css/sstyle.css'
 import WOW from 'wowjs';
 import 'axios'
+import 'slimscroll'
+import 'feather'
 new WOW.WOW().init();
 
 

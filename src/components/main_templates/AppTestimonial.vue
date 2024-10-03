@@ -1,8 +1,8 @@
 <script>
-import Navbar from './main_components/Navbar.vue'
-import Headerr from './main_components/Header.vue'
-import Foter from './main_components/Footer.vue'
-import Testimonial from './main_components/Testimonials.vue'
+import Navbar from '../main_components/Navbar.vue'
+import Headerr from '../main_components/Header.vue'
+import Foter from '../main_components/Footer.vue'
+import Testimonial from '../main_components/Testimonials.vue'
 
 export default {
   name: 'App',

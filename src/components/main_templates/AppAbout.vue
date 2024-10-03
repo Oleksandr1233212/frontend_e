@@ -1,10 +1,10 @@
 <script>
-import Navbar from './main_components/Navbar.vue'
-import Service from './main_components/Services.vue'
-import About from './main_components/About.vue'
-import Team from './main_components/Team.vue'
-import Foter from './main_components/Footer.vue'
-import Headerr from './main_components/Header.vue'
+import Navbar from '../main_components/Navbar.vue'
+import Service from '../main_components/Services.vue'
+import About from '../main_components/About.vue'
+import Team from '../main_components/Team.vue'
+import Foter from '../main_components/Footer.vue'
+import Headerr from '../main_components/Header.vue'
 export default {
   name: 'App',
   components: {

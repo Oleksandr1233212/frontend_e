@@ -1,14 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import AppMain from '../components/AppMain.vue'
-import AppErrorr from '../components/AppErr.vue'
-import AppAbout from '../components/AppAbout.vue'
-import AppContact from '../components/AppContact.vue'
-import AppCourses from '../components/AppCourses.vue'
-import AppTeam from '../components/AppTeam.vue'
-import AppTestimonial from '../components/AppTestimonial.vue'
-import AppLogin from '../components/AppLogin.vue'
-import AppRegister from '../components/AppRegister.vue';
-import AppAdmin from '../components/AppAdmin.vue'
+import AppMain from '../components/main_templates/AppMain.vue'
+import AppErrorr from '../components/main_templates/AppErr.vue'
+import AppAbout from '../components/main_templates/AppAbout.vue'
+import AppContact from '../components/main_templates/AppContact.vue'
+import AppCourses from '../components/main_templates/AppCourses.vue'
+import AppTeam from '../components/main_templates/AppTeam.vue'
+import AppTestimonial from '../components/main_templates/AppTestimonial.vue'
+import AppLogin from '../components/main_templates/AppLogin.vue'
+import AppRegister from '../components/main_templates/AppRegister.vue';
+import AppAdmin from '../components/admin_templates/AppAdmin.vue'
+import AppADmm from '../components/admin_components/admin_dashboard/AdminDash.vue'
 const routes = [
   {
     path: '/',
@@ -65,6 +66,11 @@ const routes = [
     name: 'admin',
     component: AppAdmin
   },
+  {
+    path:'/aga',
+    name: 'aga',
+    component: AppADmm
+  }
 ];
 
 const router = createRouter({

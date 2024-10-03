@@ -1,8 +1,8 @@
 <script>
-import Navbar from './main_components/Navbar.vue'
-import Headerr from './main_components/Header.vue'
-import Foter from './main_components/Footer.vue'
-import Team from './main_components/Team.vue'
+import Navbar from '../main_components/Navbar.vue'
+import Headerr from '../main_components/Header.vue'
+import Foter from '../main_components/Footer.vue'
+import Team from '../main_components/Team.vue'
 export default {
   name: 'App',
   components: {

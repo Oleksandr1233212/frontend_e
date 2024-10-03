@@ -1,10 +1,10 @@
 <script>
-import Navbar from './main_components/Navbar.vue'
-import Headerr from './main_components/Header.vue'
-import Categories from './main_components/Categories.vue'
-import Courses from './main_components/Courses.vue'
-import Testimonial from './main_components/Testimonials.vue'
-import Foter from './main_components/Footer.vue'
+import Navbar from '../main_components/Navbar.vue'
+import Headerr from '../main_components/Header.vue'
+import Categories from '../main_components/Categories.vue'
+import Courses from '../main_components/Courses.vue'
+import Testimonial from '../main_components/Testimonials.vue'
+import Foter from '../main_components/Footer.vue'
 export default {
   name: 'App',
   components: {
