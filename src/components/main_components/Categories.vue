@@ -53,6 +53,10 @@
 
 <script>
 import axios from 'axios'
+import cat1 from '@/img/cat-1.jpg'
+import cat2 from '@/img/cat-2.jpg'
+import cat3 from '@/img/cat-3.jpg'
+import cat4 from '@/img/cat-4.jpg'
 const API_URL = "http://localhost:5035/api/taskmanagerapp";
 export default {
 
@@ -61,7 +65,7 @@ export default {
   data(){
     return {
       categoriess: {
-        src: require('../../img/cat-1.jpg'),
+        src: cat1,
         name: '',
         amount:''
 
@@ -97,28 +101,28 @@ export default {
           switch (category.number) {
             case 1:
               this.categoriess = {
-                src: require('../../img/cat-1.jpg'),
+                src: cat1,
                 name: category.name,
                 amount: category.amount,
               };
               break;
             case 2:
               this.categoriesf = {
-                src: require('../../img/cat-2.jpg'),
+                src: cat2,
                 name: category.name,
                 amount: category.amount,
               };
               break;
             case 3:
               this.categoriesd = {
-                src: require('../../img/cat-3.jpg'),
+                src: cat3,
                 name: category.name,
                 amount: category.amount,
               };
               break;
             case 4:
               this.categoriesg = {
-                src: require('../../img/cat-4.jpg'),
+                src: cat4,
                 name: category.name,
                 amount: category.amount,
               };
