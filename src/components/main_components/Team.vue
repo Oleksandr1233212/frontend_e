@@ -85,7 +85,12 @@
 
 <script>
 import axios from 'axios'
-const API_URL = "http://localhost:5035/api/taskmanagerapp";
+import first from '@/img/team-1.jpg'
+import second from '@/img/team-2.jpg'
+import third from '@/img/team-3.jpg'
+import fourth from '@/img/team-4.jpg'
+import API_UR from '@/services/apiService'
+const API_URL = API_UR.BACKEND_API_URL
 export default {
   name: 'AppTeamComponent',
   components:{},
@@ -122,28 +127,28 @@ export default {
           switch (category.number) {
             case 1:
               this.first = {
-                src: require('../../img/team-1.jpg'),
+                src: first,
                 name: category.name,
                 designation:category.desig
               };
               break;
             case 2:
             this.second = {
-                src: require('../../img/team-2.jpg'),
+                src: second,
                 name: category.name,
                 designation:category.desig
               };
               break;
             case 3:
             this.third = {
-                src: require('../../img/team-3.jpg'),
+                src: third,
                 name: category.name,
                 designation:category.desig
               };
               break;
             case 4:
             this.fourth = {
-                src: require('../../img/team-4.jpg'),
+                src: fourth,
                 name: category.name,
                 designation:category.desig
               };

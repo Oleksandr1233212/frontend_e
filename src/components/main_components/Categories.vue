@@ -57,13 +57,17 @@ import cat1 from '@/img/cat-1.jpg'
 import cat2 from '@/img/cat-2.jpg'
 import cat3 from '@/img/cat-3.jpg'
 import cat4 from '@/img/cat-4.jpg'
-const API_URL = "http://localhost:5035/api/taskmanagerapp";
+// const API_URL = "http://localhost:5040/api/taskmanagerapp";
+import API_UR from '@/services/apiService'
+const API_URL = API_UR.BACKEND_API_URL
+console.log(API_URL)
 export default {
 
   name: 'AppCategoriesComponent',
   components:{},
   data(){
     return {
+      
       categoriess: {
         src: cat1,
         name: '',
@@ -151,6 +155,10 @@ export default {
   },
   created(){
     this.findCategories()
+    
+
+    
+
   }
 
 };

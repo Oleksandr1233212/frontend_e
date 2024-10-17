@@ -89,8 +89,13 @@
   
   <script>
   import axios from 'axios'
-  const API_URL = "http://localhost:5035/api/taskmanagerapp";
-  export default {
+import first from '@/img/course-1.jpg'
+import second from '@/img/course-2.jpg'
+import third from '@/img/course-3.jpg'
+
+import API_UR from '@/services/apiService'
+const API_URL = API_UR.BACKEND_API_URL
+export default {
     name: 'AppFooterComponent',
     components: {},
     data(){
@@ -137,7 +142,7 @@
           switch (category.number) {
             case 1:
               this.first = {
-                src: require('../../img/course-1.jpg'),
+                src: first,
                 name: category.name,
                 
                 price: category.price,
@@ -151,7 +156,7 @@
               break;
             case 2:
               this.second = {
-                src: require('../../img/course-2.jpg'),
+                src: second,
                 name: category.name,
                 
                 price: category.price,
@@ -164,7 +169,7 @@
               break;
             case 3:
               this.third = {
-                src: require('../../img/course-3.jpg'),
+                src: third,
                 name: category.name,
                 
                 price: category.price,

@@ -49,7 +49,13 @@
 
 // import {Carousel, Slide} from 'vue3-carousel';
 import axios from 'axios'
-const API_URL = "http://localhost:5035/api/taskmanagerapp";
+import first from '@/img/testimonial-1.jpg'
+import second from '@/img/testimonial-2.jpg'
+import third from '@/img/testimonial-3.jpg'
+import fourth from '@/img/testimonial-4.jpg'
+
+import API_UR from '@/services/apiService'
+const API_URL = API_UR.BACKEND_API_URL
 export default {
   name: 'AppTestimonialsComponent',
   components: {
@@ -120,7 +126,7 @@ export default {
           switch (category.number) {
             case 1:
               this.first = {
-                src: require('../../img/testimonial-1.jpg'),
+                src: first,
                 name: category.name,
                 profession: category.proff,
                 text: category.text
@@ -128,7 +134,7 @@ export default {
               break;
             case 2:
             this.second = {
-                src: require('../../img/testimonial-2.jpg'),
+                src: second,
                 name: category.name,
                 profession: category.proff,
                 text: category.text
@@ -136,7 +142,7 @@ export default {
               break;
             case 3:
             this.third = {
-                src: require('../../img/testimonial-3.jpg'),
+                src: third,
                 name: category.name,
                 profession: category.proff,
                 text: category.text
@@ -144,7 +150,7 @@ export default {
               break;
             case 4:
             this.fourth = {
-                src: require('../../img/testimonial-4.jpg'),
+                src: fourth,
                 name: category.name,
                 profession: category.proff,
                 text: category.text
