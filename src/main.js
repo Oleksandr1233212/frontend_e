@@ -8,7 +8,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'animate.css/animate.min.css';
 import './css/style.css';
 import 'vue3-carousel/dist/carousel.css';
-import router from './router'
+import router from './router/unauth'
 import 'feather-icons'
 import './css/sstyle.css'
 import WOW from 'wowjs';

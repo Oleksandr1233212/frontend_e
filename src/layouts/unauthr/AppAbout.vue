@@ -1,11 +1,17 @@
 <script>
-import Navbar from '../main_components/Navbar.vue'
-import Headerr from '../main_components/Header.vue'
-import Foter from '../main_components/Footer.vue'
+import Navbar from '@/components/main_components/Navbar.vue'
+import Service from '@/components/main_components/Services.vue'
+import About from '@/components/main_components/About.vue'
+import Team from '@/components/main_components/Team.vue'
+import Foter from '@/components/main_components/Footer.vue'
+import Headerr from '@/components/main_components/Header.vue'
 export default {
   name: 'App',
   components: {
     Navbar,
+    Service,
+    About,
+    Team,
     Foter,
     Headerr
    
@@ -13,6 +19,7 @@ export default {
 };
 </script>
 <template>
+
 
 <head>
     <meta charset="utf-8">
@@ -64,21 +71,19 @@ export default {
     <!-- Header End -->
 
 
-    <!-- 404 Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
-                    <h1 class="display-1">404</h1>
-                    <h1 class="mb-4">Page Not Found</h1>
-                    <p class="mb-4">We’re sorry, the page you have looked for does not exist in our website! Maybe go to our home page or try to use a search?</p>
-                    <a class="btn btn-primary rounded-pill py-3 px-5" href="">Go Back To Home</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- 404 End -->
+    <!-- Service Start -->
+    <Service />
+    <!-- Service End -->
+
+
+    <!-- About Start -->
+    <About />
+    <!-- About End -->
+
+
+    <!-- Team Start -->
+    <Team />
+    <!-- Team End -->
         
 
     <!-- Footer Start -->
@@ -92,6 +97,9 @@ export default {
 
     <!-- JavaScript Libraries -->
     
+
+    <!-- Template Javascript -->
+   
 </body>
 
 </template>

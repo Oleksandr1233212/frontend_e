@@ -1,15 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import AppMain from '../components/main_templates/AppMain.vue'
-import AppErrorr from '../components/main_templates/AppErr.vue'
-import AppAbout from '../components/main_templates/AppAbout.vue'
-import AppContact from '../components/main_templates/AppContact.vue'
-import AppCourses from '../components/main_templates/AppCourses.vue'
-import AppTeam from '../components/main_templates/AppTeam.vue'
-import AppTestimonial from '../components/main_templates/AppTestimonial.vue'
-import AppLogin from '../components/main_templates/AppLogin.vue'
-import AppRegister from '../components/main_templates/AppRegister.vue';
-import AppAdmin from '../components/admin_templates/AppAdmin.vue'
-import AppADmm from '../components/admin_components/admin_dashboard/AdminDash.vue'
+import AppMain from '@/layouts/unauthr/AppMain.vue'
+import AppErrorr from '@/layouts/unauthr/AppErr.vue'
+import AppAbout from '@/layouts/unauthr/AppAbout.vue'
+import AppContact from '@/layouts/unauthr/AppContact.vue'
+import AppCourses from '@/layouts/unauthr/AppCourses.vue'
+import AppTeam from '@/layouts/unauthr/AppTeam.vue'
+import AppTestimonial from '@/layouts/unauthr/AppTestimonial.vue'
+import AppLogin from '@/layouts/unauthr/AppLogin.vue'
+import AppRegister from '@/layouts/unauthr/AppRegister.vue';
+import AppAdmin from '@/components/admin_templates/AppAdmin.vue'
+import AppADmm from '@/components/admin_components/admin_dashboard/AdminDash.vue'
 const routes = [
   {
     path: '/',
