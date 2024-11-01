@@ -2,12 +2,12 @@
 <div class="header">
 
     <div class="header-left">
-        <router-link :to='`/admin/admin`'><a  class="logo">
+        <a  class="logo">
             <img src="../../img/logo.png" alt="Logo">
-        </a></router-link>
-        <router-link :to='`/admin/admin`'><a  class="logo logo-small">
+        </a>
+        <a  class="logo logo-small">
             <img src="../../img/logo-small.png" alt="Logo" width="30" height="30">
-        </a></router-link>
+        </a>
     </div>
     <div class="menu-toggle">
         <a href="javascript:void(0);" id="toggle_btn">
@@ -157,9 +157,9 @@
                         <p class="text-muted mb-0">Administrator</p>
                     </div>
                 </div>
-                <router-link :to='`/admin/profile`'><a class="dropdown-item">My Profile</a></router-link>
-                <router-link :to='`/admin/inbox`'><a class="dropdown-item">Inbox</a></router-link>
-                <router-link :to='`/login`'><a class="dropdown-item">Logout</a></router-link>
+                <a class="dropdown-item">My Profile</a>
+                <a class="dropdown-item">Inbox</a>
+                <a class="dropdown-item">Logout</a>
             </div>
         </li>
 

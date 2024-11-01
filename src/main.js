@@ -15,6 +15,7 @@ import WOW from 'wowjs';
 import 'axios'
 import 'slimscroll'
 import 'feather'
+import 'jquery-circle-progress'
 new WOW.WOW().init();
 
 

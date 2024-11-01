@@ -10,7 +10,19 @@ import AppLogin from '@/layouts/unauthr/AppLogin.vue'
 import AppRegister from '@/layouts/unauthr/AppRegister.vue';
 import AppAdmin from '@/components/admin_templates/AppAdmin.vue'
 import AppADmm from '@/components/admin_components/admin_dashboard/AdminDash.vue'
+import AppStud from '@/components/admin_components/student_dashboard/StudentDash.vue'
+import AppTeach from '@/components/admin_components/teacher_dashboard/TeacherDash.vue'
 const routes = [
+  {
+    path:'/teach',
+    name:'teacher',
+    component: AppTeach
+  },
+  {
+    path:'/stud',
+    name:'student',
+    component: AppStud
+  },
   {
     path: '/',
     name: 'Main',
