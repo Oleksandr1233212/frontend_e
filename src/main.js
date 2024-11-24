@@ -16,6 +16,7 @@ import 'axios'
 import 'slimscroll'
 import 'feather'
 import 'jquery-circle-progress'
+import 'chart.js'
 new WOW.WOW().init();
 
 

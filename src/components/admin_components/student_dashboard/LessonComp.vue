@@ -156,7 +156,19 @@ export default {
     margin-bottom: 20px;
     color: #333;
 }
-
+.dash-widget1 .circle-bar>div b {
+    CONTAIN-INTRINSIC-BLOCK-SIZE: AUTO 100PX;
+    /* font-size: 15px; */
+    /* font-weight: 600; */
+    color: #b8b7ff;
+    left: 10px;
+    position: relative;
+    top: 7px;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+    transform: translateY(-50%);
+}
 .circle-bar {
     display: flex;
     justify-content: center;
@@ -171,12 +183,13 @@ export default {
 
 .progress-text {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    left: 39px;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 16px;
+    font-size: 24px;
+    font-weight: bold;
     color: #333;
+    line-height: 1; /* Убедитесь, что межстрочный интервал не мешает центровке */
 }
 
 .progress-text b {

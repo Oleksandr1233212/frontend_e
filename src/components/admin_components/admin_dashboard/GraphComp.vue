@@ -1,6 +1,7 @@
 <template>
     <div>
-        <canvas id="secondChart"></canvas>
+       
+        <canvas id="thirdChart"></canvas>
     </div>
 </template>
 
@@ -9,36 +10,31 @@ import { Chart, registerables } from 'chart.js';
 
 
 Chart.register(...registerables);
-
 function generateRandomData() {
     return Array.from({ length: 6 }, () => Math.floor(Math.random() * 100));
 }
 
 export default {
     mounted() {
-        const ctx = document.getElementById('secondChart').getContext('2d');
+        const ctx = document.getElementById('thirdChart').getContext('2d');
         new Chart(ctx, {
-            type: 'line',  // Change to line chart
+            type: 'bar',  
             data: {
                 labels: ['January', 'February', 'March', 'April', 'May', 'June'],
                 datasets: [
                     {
                         label: 'Students',
                         data: generateRandomData(),
-                        borderColor: 'rgba(54, 162, 235, 1)',  // синий для учениак
-                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                        fill: false,  
-                        tension: 0.4,  
-                        pointBackgroundColor: 'rgba(54, 162, 235, 1)',  
+                        backgroundColor: 'rgba(54, 162, 235, 0.5)',  // синий для ученика
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1,
                     },
                     {
                         label: 'Teachers',
                         data: generateRandomData(),
-                        borderColor: 'rgba(255, 99, 132, 1)',  // красный для учителя
-                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                        fill: false,  
-                        tension: 0.4,  
-                        pointBackgroundColor: 'rgba(255, 99, 132, 1)',  
+                        backgroundColor: 'rgba(255, 99, 132, 0.5)',  // красный для учителя
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1,
                     }
                 ]
             },
@@ -50,6 +46,21 @@ export default {
                     },
                     legend: {
                         position: 'top',  
+                    },
+                    annotation: {
+                        annotations: {
+                            label: {
+                                type: 'label',
+                                xValue: 'April',  
+                                yValue: 100,  
+                                backgroundColor: 'white',
+                                content: ['Student: Blue', 'Teacher: Red'],
+                                font: {
+                                    size: 16,
+                                    family: 'Arial',
+                                }
+                            }
+                        }
                     }
                 },
                 scales: {

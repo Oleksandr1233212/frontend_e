@@ -24,9 +24,12 @@
   
           <!-- Карточки статистики -->
           <overview />
+          
   
           <!-- Таблиця студентів та активність -->
           <div class="row">
+            <ActivityComp class="col-xl-6 d-flex"/>
+            <GraphComp class="col-xl-6 d-flex"/>
             <!-- Таблиця "Star Students" -->
             <starStudent />
             <activity />
@@ -50,11 +53,12 @@
   /*
     Тут ми імпортуємо необхідні компоненти та зображення.
   */
+ import GraphComp from './GraphComp.vue';
  import starStudent from './StarStudentsComp.vue'
  import overview from './OverviewComp.vue'
   import Headerr from '@/components/admin_components/HeaderComp.vue';
   import Sidebar from '../SidebarComp.vue';
-  import apiService from '@/services/apiService';
+  import ActivityComp from '../LearningActivityComp.vue';
   import sozseti from './SozsetiComp.vue'
   import fooater from '../FooterComp.vue'
   import activity from './ActivityComp.vue'
@@ -70,7 +74,9 @@
       sozseti,
       fooater,
       starStudent,
-      activity
+      activity,
+      ActivityComp,
+      GraphComp
     },
     
     

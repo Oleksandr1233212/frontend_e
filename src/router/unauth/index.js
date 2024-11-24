@@ -12,7 +12,13 @@ import AppAdmin from '@/components/admin_templates/AppAdmin.vue'
 import AppADmm from '@/components/admin_components/admin_dashboard/AdminDash.vue'
 import AppStud from '@/components/admin_components/student_dashboard/StudentDash.vue'
 import AppTeach from '@/components/admin_components/teacher_dashboard/TeacherDash.vue'
+import AppProfile from '@/components/admin_components/others/Profile.vue'
 const routes = [
+  {
+    path:'/prof',
+    name:'profile',
+    component: AppProfile
+  },
   {
     path:'/teach',
     name:'teacher',
@@ -74,13 +80,13 @@ const routes = [
     component: AppRegister
   },
   {
-    path: '/admin',
+    path: '/adminn',
     name: 'admin',
     component: AppAdmin
   },
   {
-    path:'/aga',
-    name: 'aga',
+    path:'/admin',
+    name: 'admin',
     component: AppADmm
   }
 ];

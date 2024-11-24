@@ -41,29 +41,7 @@
                         <div class="col-12 col-lg-12 col-xl-8">
                             <lesson />
                             <div class="row">
-                                <div class="col-12 col-lg-12 col-xl-12 d-flex">
-                                    <div class="card flex-fill comman-shadow">
-                                        <div class="card-header">
-                                            <div class="row align-items-center">
-                                                <div class="col-6">
-                                                    <h5 class="card-title">Learning Activity</h5>
-                                                </div>
-                                                <div class="col-6">
-                                                    <ul class="chart-list-out">
-                                                        <li><span class="circle-blue"></span>Teacher</li>
-                                                        <li><span class="circle-green"></span>Student</li>
-                                                        <li class="star-menus"><a href="javascript:;"><i
-                                                                    class="fas fa-ellipsis-v"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div id="apexcharts-area"></div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
+                                <act />
                                 
                             </div>
                             <hist /> 
@@ -84,12 +62,13 @@
 </template>
 <script>
 import hed from '../HeaderComp.vue'
-import side from '../SidebarComp.vue'
+import side from '../StudentSidebar.vue'
 import overview from './Overview.vue'
 import fot from '../FooterComp.vue'
 import lesson from './LessonComp.vue'
 import calen from '../CalendarComp.vue'
 import hist from '../TeachingHistComp.vue'
+import act from '../LearningActivityComp.vue'
 export default {
     name: 'student',
     components: {
@@ -99,7 +78,8 @@ export default {
         fot,
         lesson,
         calen,
-        hist
+        hist,
+        act
     }
 }
 </script>
