@@ -39,7 +39,7 @@
                             <form>
                                 <div class="form-group">
                                     <label>Username <span class="login-danger">*</span></label>
-                                    <input class="form-control" type="text" v-model="loginData.username">
+                                    <input class="form-control" type="text" v-model="loginData.firstName">
                                     <span class="profile-views"><i class="fas fa-user-circle"></i></span>
                                 </div>
                                 <div class="form-group">
@@ -95,7 +95,7 @@ export default {
     data() {
         return {
             loginData: {
-                username: '',
+                firstName: '',
                 password: ''
             }
 
@@ -105,13 +105,13 @@ export default {
     methods: {
         async login() {
             
-            if (!this.loginData.username || !this.loginData.password) {
+            if (!this.loginData.firstName || !this.loginData.password) {
                 console.log("Username and Password are required")
             } else {
                 try {
                     console.log('gagga')
                     const formData = new FormData();
-                    formData.append('username', this.loginData.username);
+                    formData.append('firstName', this.loginData.firstName);
 
                     formData.append('password', this.loginData.password);
 

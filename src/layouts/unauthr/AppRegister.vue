@@ -106,17 +106,15 @@ export default {
         async register() {
             console.log('agahad')
             if (!this.registerData.username || !this.registerData.email || !this.registerData.password || !this.registerData.confirmedPassword) return
-            if (this.password != this.confirmedPassword) return
+            if (this.registerData.password !== this.registerData.confirmedPassword) return;
             else {
                 try {
                     console.log('gagga')
-                    const formData = new FormData();
-                    formData.append('username', this.registerData.username);
-                    formData.append('email', this.registerData.email);
-                    formData.append('password', this.registerData.password);
-
-
-                    const response = await axios.post(API_URL + "/register", formData);
+                    const response = await axios.post(API_URL + "/register", {
+                        firstName: this.registerData.username,
+    email: this.registerData.email,
+    password: this.registerData.password,
+});
                     if (response) {
                         this.$router.push('/login');
                         
