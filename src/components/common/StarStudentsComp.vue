@@ -24,8 +24,8 @@
             </thead>
             <tbody>
               <tr v-for="user in users" :key="user.id">
-                <td class="text-nowrap">{{ user.id }}</td>
-                <td class="text-nowrap">{{ user.name }}</td>
+                <td class="text-nowrap">{{ user._id }}</td>
+                <td class="text-nowrap">{{ user.username }}</td>
                 <td class="text-center">{{ user.marks }}</td>
                 <td class="text-center">{{ user.percentage }}%</td>
                 <td class="text-end">{{ user.year }}</td>
@@ -50,7 +50,7 @@ export default {
     // 📌 Функция получения пользователей
     const fetchUsers = async () => {
       try {
-        const response = await apiService.get('/users'); // ✅ Исправленный вызов API
+        const response = await apiService.get('api/auth/users'); // ✅ Исправленный вызов API
         users.value = response.data.map((user) => ({
           ...user,
           marks: getRandomMarks(),

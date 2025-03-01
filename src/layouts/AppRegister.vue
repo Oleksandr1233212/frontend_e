@@ -35,22 +35,22 @@
                             <form>
                                 <div class="form-group">
                                     <label>Username <span class="login-danger">*</span></label>
-                                    <input class="form-control" type="text" v-model="registerData.username">
+                                    <input class="form-control" type="text" v-model="username">
                                     <span class="profile-views"><i class="fas fa-user-circle"></i></span>
                                 </div>
                                 <div class="form-group">
                                     <label>Email <span class="login-danger">*</span></label>
-                                    <input class="form-control" type="text" v-model="registerData.email">
+                                    <input class="form-control" type="text" v-model="email">
                                     <span class="profile-views"><i class="fas fa-envelope"></i></span>
                                 </div>
                                 <div class="form-group">
                                     <label>Password <span class="login-danger">*</span></label>
-                                    <input class="form-control pass-input" type="text" v-model="registerData.password">
+                                    <input class="form-control pass-input" type="text" v-model="password">
                                     <span class="profile-views feather-eye toggle-password"></span>
                                 </div>
                                 <div class="form-group">
                                     <label>Confirm password <span class="login-danger">*</span></label>
-                                    <input class="form-control pass-confirm" type="text" v-model="registerData.confirmedPassword">
+                                    <input class="form-control pass-confirm" type="text" v-model="confirmedPassword">
                                     <span class="profile-views feather-eye reg-toggle-password"></span>
                                 </div>
                                 <div class=" dont-have">Already Registered? <router-link :to='`/login`'><a>Login</a></router-link>
@@ -83,56 +83,62 @@
 </template>
 
 <script>
-import axios from 'axios'
-const API_URL = "http://localhost:5040/api/taskmanagerapp";
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+import axios from 'axios';
+
 export default {
-    name: "Register",
-    components: {
+  name: 'Register',
+  setup() {
+    const router = useRouter();
 
-    },
-    data() {
-        return {
-            registerData: {
-                username: '',
-                password: '',
-                email: '',
-                confirmedPassword: ''
+    const username = ref('');
+    const email = ref('');
+    const password = ref('');
+    const confirmedPassword = ref('');
+    const errorMessage = ref('');
 
-            }
+    const register = async () => {
+      errorMessage.value = ''; 
+      if (!username.value || !email.value || !password.value || !confirmedPassword.value) {
+        errorMessage.value = 'Please fill in all fields.';
+        return;
+      }
+      if (password.value !== confirmedPassword.value) {
+        errorMessage.value = 'Passwords do not match.';
+        return;
+      }
 
+      try {
+        console.log(username.value)
+        const API_URL = "http://localhost:5040/api";
+        const response = await axios.post(`http://localhost:5048/api/auth/register`, {
+            username: username.value,
+          
+          password: password.value,
+          role:'admin'
+        });
+        if (response) {
+          router.push('/login');
         }
-    },
-    methods: {
-        async register() {
-            console.log('agahad')
-            if (!this.registerData.username || !this.registerData.email || !this.registerData.password || !this.registerData.confirmedPassword) return
-            if (this.registerData.password !== this.registerData.confirmedPassword) return;
-            else {
-                try {
-                    console.log('gagga')
-                    const response = await axios.post(API_URL + "/register", {
-                        firstName: this.registerData.username,
-    email: this.registerData.email,
-    password: this.registerData.password,
-});
-                    if (response) {
-                        this.$router.push('/login');
-                        
-                    }
+        
+        username.value = '';
+        email.value = '';
+        password.value = '';
+        confirmedPassword.value = '';
+      } catch (error) {
+        errorMessage.value = 'Something went wrong. Please try again.';
+      }
+    };
 
-                    this.registerData = {
-                        username: '',
-                        email: '',
-                        password: ''
-                    };
-
-                } catch (error) {
-                    console.log('Something went wrong')
-                }
-            }
-
-        }
-
-    }
-}
+    return {
+      username,
+      email,
+      password,
+      confirmedPassword,
+      errorMessage,
+      register,
+    };
+  },
+};
 </script>
