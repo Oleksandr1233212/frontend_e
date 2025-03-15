@@ -66,7 +66,7 @@ const protectedRoutes = [
       { path: 'edit-student', name: 'EditStudent', component: EditStudent },
       { path: 'details-student', name: 'DetailsStudent', component: StudentDetails },
       { path: 'students', name: 'Students', component: Students },
-      { path: 'add-student', name: 'AddStudent', component: AddStudent },
+      { path: '/add-student', name: 'AddStudent', component: AddStudent },
     ],
   },
   // 🔹 Викладач

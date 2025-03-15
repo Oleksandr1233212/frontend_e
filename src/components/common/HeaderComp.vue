@@ -3,10 +3,10 @@
 
     <div class="header-left">
         <a  class="logo">
-            <img src="../../img/logo.png" alt="Logo">
+            <img src="@/assets/img/logo.png" alt="Logo">
         </a>
         <a  class="logo logo-small">
-            <img src="../../img/logo-small.png" alt="Logo" width="30" height="30">
+            <img src="@/assets/img/logo-small.png" alt="Logo" width="30" height="30">
         </a>
     </div>
     <div class="menu-toggle">
@@ -28,7 +28,7 @@
     <ul class="nav user-menu">
         <li class="nav-item dropdown noti-dropdown language-drop me-2">
             <a href="#" class="dropdown-toggle nav-link header-nav-list" data-bs-toggle="dropdown">
-                <img src="../../img/header-icon-01.svg" alt="">
+                <img src="@/assets/img/header-icon-01.svg" alt="">
             </a>
             <div class="dropdown-menu ">
                 <div class="noti-content">
@@ -45,7 +45,7 @@
 
         <li class="nav-item dropdown noti-dropdown me-2">
             <a href="#" class="dropdown-toggle nav-link header-nav-list" data-bs-toggle="dropdown">
-                <img src="../../img/header-icon-05.svg" alt="">
+                <img src="@/assets/img/header-icon-05.svg" alt="">
             </a>
             <div class="dropdown-menu notifications">
                 <div class="topnav-dropdown-header">
@@ -59,7 +59,7 @@
                                 <div class="media d-flex">
                                     <span class="avatar avatar-sm flex-shrink-0">
                                         <img class="avatar-img rounded-circle" alt="User Image"
-                                            src="../../img/avatar-02.jpg">
+                                            src="@/assets/img/avatar-02.jpg">
                                     </span>
                                     <div class="media-body flex-grow-1">
                                         <p class="noti-details"><span class="noti-title">Carlson Tech</span> has
@@ -75,7 +75,7 @@
                                 <div class="media d-flex">
                                     <span class="avatar avatar-sm flex-shrink-0">
                                         <img class="avatar-img rounded-circle" alt="User Image"
-                                            src="../../img/avatar-11.jpg">
+                                            src="@/assets/img/avatar-11.jpg">
                                     </span>
                                     <div class="media-body flex-grow-1">
                                         <p class="noti-details"><span class="noti-title">International Software
@@ -92,7 +92,7 @@
                                 <div class="media d-flex">
                                     <span class="avatar avatar-sm flex-shrink-0">
                                         <img class="avatar-img rounded-circle" alt="User Image"
-                                            src="../../img/avatar-17.jpg">
+                                            src="@/assets/img/avatar-17.jpg">
                                     </span>
                                     <div class="media-body flex-grow-1">
                                         <p class="noti-details"><span class="noti-title">John Hendry</span> sent
@@ -109,7 +109,7 @@
                                 <div class="media d-flex">
                                     <span class="avatar avatar-sm flex-shrink-0">
                                         <img class="avatar-img rounded-circle" alt="User Image"
-                                            src="../../img/avatar-13.jpg">
+                                            src="@/assets/img/avatar-13.jpg">
                                     </span>
                                     <div class="media-body flex-grow-1">
                                         <p class="noti-details"><span class="noti-title">Mercury Software
@@ -131,14 +131,14 @@
 
         <li class="nav-item zoom-screen me-2">
             <a href="#" class="nav-link header-nav-list win-maximize">
-                <img src="../../img/header-icon-04.svg" alt="">
+                <img src="@/assets/img/header-icon-04.svg" alt="">
             </a>
         </li>
 
         <li class="nav-item dropdown has-arrow new-user-menus">
             <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
                 <span class="user-img">
-                    <img class="rounded-circle" src="../../img/avatar-01.jpg" width="31"
+                    <img class="rounded-circle" src="@/assets/img/avatar-01.jpg" width="31"
                         alt="Soeng Souy">
                     <div class="user-text">
                         <h6>Soeng Souy</h6>
@@ -149,7 +149,7 @@
             <div class="dropdown-menu">
                 <div class="user-header">
                     <div class="avatar avatar-sm">
-                        <img src="../../img/avatar-01.jpg" alt="User Image"
+                        <img src="@/assets/img/avatar-01.jpg" alt="User Image"
                             class="avatar-img rounded-circle">
                     </div>
                     <div class="user-text">

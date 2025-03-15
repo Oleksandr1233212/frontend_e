@@ -89,8 +89,8 @@ import first from '@/assets/img/team-1.jpg'
 import second from '@/assets/img/team-2.jpg'
 import third from '@/assets/img/team-3.jpg'
 import fourth from '@/assets/img/team-4.jpg'
-import API_UR from '@/services/apiService'
-const API_URL = API_UR.BACKEND_API_URL
+import apiService from '@/services/apiService'
+
 export default {
   name: 'AppTeamComponent',
   components:{},
@@ -121,7 +121,7 @@ export default {
   methods:{
     async teamSerch(){
       try{
-        const { data: categories } = await axios.get(API_URL + '/team');
+        const { data: categories } = await apiService.get('/api/team');
         console.log(categories)
         categories.forEach(category => {
           switch (category.number) {

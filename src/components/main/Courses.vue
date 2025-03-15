@@ -93,8 +93,8 @@ import first from '@/assets/img/course-1.jpg'
 import second from '@/assets/img/course-2.jpg'
 import third from '@/assets/img/course-3.jpg'
 
-import API_UR from '@/services/apiService'
-const API_URL = API_UR.BACKEND_API_URL
+import apiService from '@/services/apiService'
+
 export default {
     name: 'AppFooterComponent',
     components: {},
@@ -136,7 +136,7 @@ export default {
         async findCource(){
             try{
                 
-                const { data: categories } = await axios.get(API_URL + '/cources');
+                const { data: categories } = await apiService.get('/api/cources');
                 console.log(categories)
                 categories.forEach(category => {
           switch (category.number) {

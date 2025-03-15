@@ -31,8 +31,9 @@
             <ActivityComp class="col-xl-6 d-flex"/>
             <GraphComp class="col-xl-6 d-flex"/>
             <!-- Таблиця "Star Students" -->
-            <starStudent />
             <activity />
+            <starStudent class="col-xl-12 d-flex"/>
+            
   
             <!-- Розділ "Student Activity" -->
             

@@ -54,8 +54,8 @@ import second from '@/assets/img/testimonial-2.jpg'
 import third from '@/assets/img/testimonial-3.jpg'
 import fourth from '@/assets/img/testimonial-4.jpg'
 
-import API_UR from '@/services/apiService'
-const API_URL = API_UR.BACKEND_API_URL
+import apiService from '@/services/apiService'
+
 export default {
   name: 'AppTestimonialsComponent',
   components: {
@@ -120,7 +120,7 @@ export default {
   methods:{
     async testim(){
       try{
-        const { data: testimonials } = await axios.get(API_URL + '/testim');
+        const { data: testimonials } = await apiService.get('/api/testim');
         console.log(testimonials)
         testimonials.forEach(category => {
           switch (category.number) {

@@ -58,9 +58,8 @@ import cat2 from '@/assets/img/cat-2.jpg'
 import cat3 from '@/assets/img/cat-3.jpg'
 import cat4 from '@/assets/img/cat-4.jpg'
 // const API_URL = "http://localhost:5040/api/taskmanagerapp";
-import API_UR from '@/services/apiService'
-const API_URL = API_UR.BACKEND_API_URL
-console.log(API_URL)
+import apiService from '@/services/apiService'
+
 export default {
 
   name: 'AppCategoriesComponent',
@@ -99,7 +98,7 @@ export default {
     async findCategories(){
       try{
         
-        const { data: categories } = await axios.get(API_URL + '/courses');
+        const { data: categories } = await apiService.get("/api/courses");
         console.log(categories)
         categories.forEach(category => {
           switch (category.number) {

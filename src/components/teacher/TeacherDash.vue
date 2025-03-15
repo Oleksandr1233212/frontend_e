@@ -83,61 +83,61 @@
 </template>
 <script>
 
-// import $ from 'jquery'
-// import fot from '@/components/common/FooterComp.vue'
-// import hed from '@/components/common/HeaderComp.vue'
-// import side from '@/components/common/TeacherSidebar.vue'
-// import overview from '@/components/common/Overview.vue'
-// import lesson from '@/components/common/LessonComp.vue'
-// import hist from '@/components/common/TeachingHistComp.vue'
-// import calend from '@/components/common/CalendarComp.vue'
-// import ActivityComp from '@/components/common/LearningActivityComp.vue'
-// export default {
-//     name: 'teacher',
-//     components: {
-//         fot,
-//         hed,
-//         side,
-//         overview,
-//         lesson,
-//         hist,
-//         calend,
-//         ActivityComp
-//     },
-//     mounted(){
-//         this.circle
-//     },
-//     methods:{
-//         circle(){
-//             $(document).ready(function () {
-//     $('.circle-graph').circleProgress({
-//         value: $('.circle-graph').data('percent'),
-//         size: 140,
-//         thickness: 10,
-//         fill: {
-//             color: '#007bff' // цвет заполнения круга
-//         },
-//         startAngle: -Math.PI / 2, // Начало анимации с верха
-//     }).on('circle-animation-progress', function (event, progress) {
-//         $(this).find('.progress-text b').text(Math.round(55 + (60 - 55) * progress) + '/60');
-//     });
-// });
-//         }
-//     }
-// }
-// $(document).ready(function () {
-//     $('.circle-graph').circleProgress({
-//         value: $('.circle-graph').data('percent'),
-//         size: 140,
-//         thickness: 10,
-//         fill: {
-//             color: '#007bff' // цвет заполнения круга
-//         },
-//         startAngle: -Math.PI / 2, // Начало анимации с верха
-//     }).on('circle-animation-progress', function (event, progress) {
-//         $(this).find('.progress-text b').text(Math.round(55 * progress) + '/60');
-//     });
-// });
+import $ from 'jquery'
+import fot from '@/components/common/FooterComp.vue'
+import hed from '@/components/common/HeaderComp.vue'
+import side from '@/components/common/TeacherSidebar.vue'
+import overview from '@/components/common/Overview.vue'
+import lesson from '@/components/common/LessonComp.vue'
+import hist from '@/components/common/TeachingHistComp.vue'
+import calend from '@/components/common/CalendarComp.vue'
+import ActivityComp from '@/components/common/LearningActivityComp.vue'
+export default {
+    name: 'teacher',
+    components: {
+        fot,
+        hed,
+        side,
+        overview,
+        lesson,
+        hist,
+        calend,
+        ActivityComp
+    },
+    mounted(){
+        this.circle
+    },
+    methods:{
+        circle(){
+            $(document).ready(function () {
+    $('.circle-graph').circleProgress({
+        value: $('.circle-graph').data('percent'),
+        size: 140,
+        thickness: 10,
+        fill: {
+            color: '#007bff' // цвет заполнения круга
+        },
+        startAngle: -Math.PI / 2, // Начало анимации с верха
+    }).on('circle-animation-progress', function (event, progress) {
+        $(this).find('.progress-text b').text(Math.round(55 + (60 - 55) * progress) + '/60');
+    });
+});
+        }
+    }
+}
+$(document).ready(function () {
+    $('.circle-graph').circleProgress({
+        value: $('.circle-graph').data('percent'),
+        size: 140,
+        thickness: 10,
+        fill: {
+            color: '#007bff' // цвет заполнения круга
+        },
+        startAngle: -Math.PI / 2, // Начало анимации с верха
+    }).on('circle-animation-progress', function (event, progress) {
+        $(this).find('.progress-text b').text(Math.round(55 * progress) + '/60');
+    });
+});
 </script>
 <style>
 /* Основные стили для контейнера и текста */
