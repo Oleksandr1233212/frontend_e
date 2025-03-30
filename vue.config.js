@@ -4,6 +4,8 @@ require('dotenv').config(); // Завантаження змінних сере�
 
 module.exports = defineConfig({
   transpileDependencies: true,
+  publicPath: './',
+  lintOnSave: false,
   devServer: {
     port: 8080, // Локальний сервер працює на порту 8080
     open: true, // Автоматично відкриває сторінку в браузері після запуску
