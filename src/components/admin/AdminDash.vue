@@ -46,6 +46,7 @@
   
         <!-- Футер -->
         <fooater />
+        <router-view></router-view>
       </div>
     </div>
   </template>
