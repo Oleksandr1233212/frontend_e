@@ -3,7 +3,7 @@ import axios from 'axios';
 import { getAccessToken } from './authService';
 
 const apiService = axios.create({
-  baseURL: 'http://localhost:5048',
+  baseURL: 'http://164.90.162.39',
 });
 
 apiService.interceptors.request.use((config) => {
